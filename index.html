@@ -3,29 +3,110 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alaskarbros — Romans & Zombies</title>
+<title>Alaskarbros</title>
+<meta name="description" content="Alaskarbros makes small, atmospheric games for iPhone.">
 <style>
-body{margin:0;font-family:Georgia,serif;background:#14100c;color:#e9dcc3;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center}
-main{max-width:560px;padding:48px 24px}
-h1{font-size:2.2rem;margin:0 0 8px;color:#f2c14e}
-p{line-height:1.6;margin:12px 0}
-a{color:#f2c14e}
-.links{margin-top:28px;display:flex;flex-direction:column;gap:10px}
-.links a{display:inline-block;padding:12px 18px;border:1px solid #f2c14e;border-radius:8px;text-decoration:none}
-small{display:block;margin-top:36px;opacity:.6}
+  :root{
+    --bg:#0b0a09;
+    --panel:#131110;
+    --line:#2a2522;
+    --ink:#e9e3d7;
+    --muted:#9a9086;
+    --gold:#f2c14e;
+    --cold:#c8c6c2;
+    --blood:#b5342b;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:Georgia,'Times New Roman',serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:72px 22px 56px}
+  header{margin-bottom:56px}
+  .mark{
+    font-size:.78rem;letter-spacing:.42em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 14px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  h1{font-size:clamp(2rem,7vw,2.9rem);line-height:1.15;margin:0 0 14px;font-weight:400}
+  .tagline{color:var(--muted);margin:0;max-width:44ch}
+  .games{display:grid;gap:22px}
+  .game{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:28px 26px;
+    border-top:3px solid var(--accent,var(--line));
+  }
+  .game h2{margin:0 0 6px;font-size:1.5rem;font-weight:400;color:var(--accent,var(--ink))}
+  .kicker{
+    margin:0 0 14px;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  .game p{margin:0 0 20px;color:#cfc8bd}
+  .links{display:flex;flex-wrap:wrap;gap:10px}
+  .links a{
+    display:inline-block;padding:10px 16px;border-radius:8px;
+    text-decoration:none;font-size:.94rem;
+    border:1px solid var(--line);color:var(--ink);
+    transition:border-color .15s ease,color .15s ease;
+  }
+  .links a:hover{border-color:var(--accent,var(--ink));color:var(--accent,var(--ink))}
+  .links a.primary{border-color:var(--accent,var(--ink));color:var(--accent,var(--ink))}
+  footer{
+    margin-top:56px;padding-top:26px;border-top:1px solid var(--line);
+    color:var(--muted);font-size:.92rem;
+    display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;justify-content:space-between;
+  }
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--ink)}
+  @media (max-width:520px){
+    .wrap{padding:52px 18px 40px}
+    .links a{flex:1 1 100%;text-align:center}
+  }
 </style>
 </head>
 <body>
-<main>
-<h1>Romans &amp; Zombies</h1>
-<p>One button. Ten waves. Hold the line with your legion against the undead horde.</p>
-<p>An iOS game by Alaskarbros.</p>
-<div class="links">
-<a href="https://apps.apple.com/app/id6807706116">Get it on the App Store</a>
-<a href="https://thoracic-cone-000.notion.site/Romans-Zombies-Support-Privacy-3cf5f50a9e0580e7b04aefde3ca4ce44">Support &amp; Privacy Policy</a>
-<a href="mailto:alaskarbros@gmail.com">Contact: alaskarbros@gmail.com</a>
+<div class="wrap">
+
+  <header>
+    <p class="mark">Alaskarbros</p>
+    <h1>Small games, made carefully, for iPhone.</h1>
+    <p class="tagline">Two of them so far. Both are single-player, both are quiet about it, and neither will ask you to make an account.</p>
+  </header>
+
+  <main class="games">
+
+    <section class="game" style="--accent:var(--blood)">
+      <h2>Lost In Store</h2>
+      <p class="kicker">First-person horror</p>
+      <p>You are a child. The store closed at nine. You are still inside — and so is the thing that shares it with you. No map, no marker, no arrow. Sound is the whole interface.</p>
+      <div class="links">
+        <a class="primary" href="https://apps.apple.com/app/id6796198606">App Store</a>
+        <a href="https://thoracic-cone-000.notion.site/Lost-In-Store-Support-Privacy-165b73861cfa4b30a11c141dea22f274">Support &amp; Privacy</a>
+      </div>
+    </section>
+
+    <section class="game" style="--accent:var(--gold)">
+      <h2>Romans &amp; Zombies</h2>
+      <p class="kicker">One-button survival</p>
+      <p>One button. Ten waves. Hold the line with your legion against the undead horde, under a blood sun that does not set.</p>
+      <div class="links">
+        <a class="primary" href="https://apps.apple.com/app/id6807706116">App Store</a>
+        <a href="https://thoracic-cone-000.notion.site/Romans-Zombies-Support-Privacy-3cf5f50a9e0580e7b04aefde3ca4ce44">Support &amp; Privacy</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span><a href="mailto:alaskarbros@gmail.com">alaskarbros@gmail.com</a></span>
+    <span>&copy; 2026 Alaskarbros</span>
+  </footer>
+
 </div>
-<small>© 2026 Alaskarbros</small>
-</main>
 </body>
 </html>
