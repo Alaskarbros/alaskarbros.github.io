@@ -1,0 +1,54 @@
+/* Alaskarbros policy and support pages (/orbitown/ and /orbitown/privacy/<lang>/). Loads after base.css.
+   System fonts only: these pages make no third-party requests. */
+body{
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Geeza Pro","Noto Sans Arabic","Hiragino Sans","PingFang SC","Apple SD Gothic Neo",Arial,sans-serif;
+  background:
+    radial-gradient(70% 420px at 85% -80px,rgba(108,92,224,.32),transparent 70%),
+    radial-gradient(50% 300px at 0% 0%,rgba(129,224,193,.10),transparent 70%),
+    var(--bg);
+  background-repeat:no-repeat;
+}
+.wrap{max-width:780px;margin:0 auto;padding:40px var(--gutter) 56px}
+header{margin-bottom:40px}
+.mark{margin:0 0 56px}
+.back{
+  display:inline-flex;align-items:center;gap:10px;min-height:44px;
+  font-family:ui-rounded,"SF Pro Rounded",system-ui,-apple-system,sans-serif;font-weight:700;font-size:1.02rem;
+  color:var(--ink);text-decoration:none;
+}
+.back::before{content:"";width:28px;height:28px;flex:none;background:url(/assets/img/favicon.svg) center/contain no-repeat}
+.back:hover{color:#fff}
+h1{
+  margin:0;font-family:ui-rounded,"SF Pro Rounded",system-ui,-apple-system,sans-serif;
+  font-weight:800;font-size:clamp(2rem,6.4vw,3.2rem);line-height:1.08;letter-spacing:-.025em;
+}
+.doc{font-size:1.02rem;line-height:1.7}
+.doc h2{
+  margin:56px 0 14px;padding-top:30px;border-top:1px solid var(--line);
+  font-family:ui-rounded,"SF Pro Rounded",system-ui,-apple-system,sans-serif;
+  font-weight:800;font-size:1.6rem;letter-spacing:-.015em;color:var(--mint);
+}
+.doc h2:first-child{margin-top:0}
+.doc h3{margin:34px 0 8px;font-weight:700;font-size:1.14rem;color:var(--ink)}
+.doc p,.doc li{color:var(--ink-2)}
+.doc p{margin:0 0 14px}
+.doc ul{margin:0 0 16px;padding-inline-start:1.25em}
+.doc li{margin:6px 0}
+.doc li::marker{color:var(--mint)}
+.doc a{color:var(--mint);text-underline-offset:3px;overflow-wrap:anywhere}
+.doc a:hover{color:#a6f0d8}
+.doc strong{color:var(--ink);font-weight:650}
+.langs{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 26px;font-size:.92rem}
+.langs a{
+  display:inline-flex;align-items:center;min-height:36px;padding:4px 12px;border-radius:999px;
+  border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--ink-2);text-decoration:none;overflow-wrap:normal;
+}
+.langs a:hover{border-color:var(--line-2);color:var(--ink)}
+.langs a[aria-current]{border-color:rgba(129,224,193,.5);background:rgba(129,224,193,.12);color:var(--mint)}
+footer{
+  margin-top:64px;padding-top:26px;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;justify-content:space-between;
+  color:var(--muted);font-size:.92rem;
+}
+footer a{color:var(--ink-2);text-underline-offset:3px}
+footer a:hover{color:var(--ink)}
