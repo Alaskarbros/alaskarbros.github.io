@@ -2,111 +2,243 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alaskarbros</title>
-<meta name="description" content="Alaskarbros makes small, atmospheric games for iPhone.">
-<style>
-  :root{
-    --bg:#0b0a09;
-    --panel:#131110;
-    --line:#2a2522;
-    --ink:#e9e3d7;
-    --muted:#9a9086;
-    --gold:#f2c14e;
-    --cold:#c8c6c2;
-    --blood:#b5342b;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:Georgia,'Times New Roman',serif;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:760px;margin:0 auto;padding:72px 22px 56px}
-  header{margin-bottom:56px}
-  .mark{
-    font-size:.78rem;letter-spacing:.42em;text-transform:uppercase;
-    color:var(--muted);margin:0 0 14px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
-  }
-  h1{font-size:clamp(2rem,7vw,2.9rem);line-height:1.15;margin:0 0 14px;font-weight:400}
-  .tagline{color:var(--muted);margin:0;max-width:44ch}
-  .games{display:grid;gap:22px}
-  .game{
-    background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:28px 26px;
-    border-top:3px solid var(--accent,var(--line));
-  }
-  .game h2{margin:0 0 6px;font-size:1.5rem;font-weight:400;color:var(--accent,var(--ink))}
-  .kicker{
-    margin:0 0 14px;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;
-    color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
-  }
-  .game p{margin:0 0 20px;color:#cfc8bd}
-  .links{display:flex;flex-wrap:wrap;gap:10px}
-  .links a{
-    display:inline-block;padding:10px 16px;border-radius:8px;
-    text-decoration:none;font-size:.94rem;
-    border:1px solid var(--line);color:var(--ink);
-    transition:border-color .15s ease,color .15s ease;
-  }
-  .links a:hover{border-color:var(--accent,var(--ink));color:var(--accent,var(--ink))}
-  .links a.primary{border-color:var(--accent,var(--ink));color:var(--accent,var(--ink))}
-  footer{
-    margin-top:56px;padding-top:26px;border-top:1px solid var(--line);
-    color:var(--muted);font-size:.92rem;
-    display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;justify-content:space-between;
-  }
-  footer a{color:var(--muted)}
-  footer a:hover{color:var(--ink)}
-  @media (max-width:520px){
-    .wrap{padding:52px 18px 40px}
-    .links a{flex:1 1 100%;text-align:center}
-  }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alaskarbros — Small games for iPhone</title>
+<meta name="description" content="Alaskarbros is a one-person game studio in Kuwait making small, careful games for iPhone: Orbitown, Lost In Store, Romans &amp; Zombies, دله وسيف and نظف مخك.">
+<link rel="canonical" href="https://alaskarbros.github.io/">
+<meta name="theme-color" content="#07070d">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alaskarbros">
+<meta property="og:url" content="https://alaskarbros.github.io/">
+<meta property="og:title" content="Alaskarbros — Small games for iPhone">
+<meta property="og:description" content="Alaskarbros is a one-person game studio in Kuwait making small, careful games for iPhone: Orbitown, Lost In Store, Romans &amp; Zombies, دله وسيف and نظف مخك.">
+<meta property="og:image" content="https://alaskarbros.github.io/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Alaskarbros: the five games' icons beside Orbitown's tiny planet">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alaskarbros — Small games for iPhone">
+<meta name="twitter:description" content="Alaskarbros is a one-person game studio in Kuwait making small, careful games for iPhone: Orbitown, Lost In Store, Romans &amp; Zombies, دله وسيف and نظف مخك.">
+<meta name="twitter:image" content="https://alaskarbros.github.io/assets/img/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://is1-ssl.mzstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&amp;family=Inter:wght@400..600&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Alaskarbros","url":"https://alaskarbros.github.io/","logo":"https://alaskarbros.github.io/assets/img/apple-touch-icon.png","email":"alaskarbros@gmail.com","sameAs":["https://apps.apple.com/developer/id1872516763"]}
+</script>
 </head>
 <body>
-<div class="wrap">
+<a class="skip" href="#main">Skip to content</a>
 
-  <header>
-    <p class="mark">Alaskarbros</p>
-    <h1>Small games, made carefully, for iPhone.</h1>
-    <p class="tagline">Two of them so far. Both are single-player, both are quiet about it, and neither will ask you to make an account.</p>
-  </header>
+<header class="nav">
+  <div class="wrap">
+    <a class="wordmark" href="/" aria-label="Alaskarbros, home"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a2f8f"/><stop offset="1" stop-color="#0b0a1c"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#lg)"/><path fill="#f5c35b" fill-rule="evenodd" d="M32 11 47.5 51h-7l-3.3-9H26.8l-3.3 9h-7L32 11Zm0 15.5L28.8 36h6.4L32 26.5Z"/><ellipse cx="32" cy="37" rx="26" ry="8" fill="none" stroke="#81e0c1" stroke-width="2.6" transform="rotate(-16 32 37)"/></svg><span>Alaskarbros</span></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#studio">Studio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-  <main class="games">
+<main id="main">
 
-    <section class="game" style="--accent:var(--blood)">
-      <h2>Lost In Store</h2>
-      <p class="kicker">First-person horror</p>
-      <p>You are a child. The store closed at nine. You are still inside — and so is the thing that shares it with you. No map, no marker, no arrow. Sound is the whole interface.</p>
-      <div class="links">
-        <a class="primary" href="https://apps.apple.com/app/id6796198606">App Store</a>
-        <a href="https://thoracic-cone-000.notion.site/Lost-In-Store-Support-Privacy-165b73861cfa4b30a11c141dea22f274">Support &amp; Privacy</a>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__wall" aria-hidden="true">
+        <div class="hero__col"><div class="hero__track"><img src="assets/img/orbitown/shot-01.webp" width="420" height="913" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/33/13/34/3313346f-e9f3-c746-ca31-d5d8841b5348/02.png/300x650bb.webp" width="300" height="650" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/47/87/26/478726e5-17b6-1050-3d7b-054adc92327d/3-camp.png/300x650bb.webp" width="300" height="650" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/89/b3/11/89b311ce-6b02-9112-ad9b-212ea7d2ce5a/01.png/600x0w.webp" width="600" height="278" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/02/52/90/02529005-2e45-8647-78a4-1ff5b9796097/IMG_0483.png/300x650bb.webp" width="300" height="650" alt="" decoding="async"><img src="assets/img/orbitown/shot-01.webp" width="420" height="913" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/33/13/34/3313346f-e9f3-c746-ca31-d5d8841b5348/02.png/300x650bb.webp" width="300" height="650" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/47/87/26/478726e5-17b6-1050-3d7b-054adc92327d/3-camp.png/300x650bb.webp" width="300" height="650" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/89/b3/11/89b311ce-6b02-9112-ad9b-212ea7d2ce5a/01.png/600x0w.webp" width="600" height="278" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/02/52/90/02529005-2e45-8647-78a4-1ff5b9796097/IMG_0483.png/300x650bb.webp" width="300" height="650" alt="" decoding="async"></div></div>
+        <div class="hero__col"><div class="hero__track"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/26/8a/72/268a72e4-7550-ce34-9f4c-56fddf58cf8d/03.png/300x650bb.webp" width="300" height="650" alt="" decoding="async"><img src="assets/img/orbitown/shot-03.webp" width="420" height="913" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/26/c9/4f/26c94fca-079d-877a-3243-ced0889d014d/03.png/600x0w.webp" width="600" height="278" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/44/5c/fb/445cfb83-cf7b-ed40-a297-a8be97723866/4-battle.png/300x650bb.webp" width="300" height="650" alt="" decoding="async"><img src="assets/img/orbitown/shot-06.webp" width="420" height="913" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/26/8a/72/268a72e4-7550-ce34-9f4c-56fddf58cf8d/03.png/300x650bb.webp" width="300" height="650" alt="" decoding="async"><img src="assets/img/orbitown/shot-03.webp" width="420" height="913" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/26/c9/4f/26c94fca-079d-877a-3243-ced0889d014d/03.png/600x0w.webp" width="600" height="278" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/44/5c/fb/445cfb83-cf7b-ed40-a297-a8be97723866/4-battle.png/300x650bb.webp" width="300" height="650" alt="" decoding="async"><img src="assets/img/orbitown/shot-06.webp" width="420" height="913" alt="" decoding="async"></div></div>
+        <div class="hero__col"><div class="hero__track"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/45/3d/52/453d525a-b9f0-7543-137c-dac2c065fd96/1-title.png/300x650bb.webp" width="300" height="650" alt="" decoding="async"><img src="assets/img/orbitown/shot-05.webp" width="420" height="913" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/7f/43/dc/7f43dcb0-eff4-398f-23fa-371521b70ce7/04.png/300x650bb.webp" width="300" height="650" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/36/bd/21/36bd212a-d1fa-5ef4-6a6b-f260c39c2afc/IMG_0484.png/300x650bb.webp" width="300" height="650" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b0/23/a4/b023a4a5-ac04-8edb-4baa-de1c25f4ae67/04.png/600x0w.webp" width="600" height="278" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/45/3d/52/453d525a-b9f0-7543-137c-dac2c065fd96/1-title.png/300x650bb.webp" width="300" height="650" alt="" decoding="async"><img src="assets/img/orbitown/shot-05.webp" width="420" height="913" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/7f/43/dc/7f43dcb0-eff4-398f-23fa-371521b70ce7/04.png/300x650bb.webp" width="300" height="650" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/36/bd/21/36bd212a-d1fa-5ef4-6a6b-f260c39c2afc/IMG_0484.png/300x650bb.webp" width="300" height="650" alt="" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b0/23/a4/b023a4a5-ac04-8edb-4baa-de1c25f4ae67/04.png/600x0w.webp" width="600" height="278" alt="" decoding="async"></div></div>
+        <div class="hero__col"><div class="hero__track"><img src="assets/img/orbitown/shot-07.webp" width="420" height="913" alt="" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/38/88/59/388859ce-c9a2-d2eb-e966-b7c1d42513fb/05.png/600x0w.webp" width="600" height="278" alt="" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/08/3c/39/083c3936-7c02-624d-7542-4bd8b7743a87/06.png/300x650bb.webp" width="300" height="650" alt="" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/19/8b/f7/198bf7e7-cc6b-c28a-bd36-71c11914a2ba/5-ghoul.png/300x650bb.webp" width="300" height="650" alt="" loading="lazy" decoding="async"><img src="assets/img/orbitown/shot-02.webp" width="420" height="913" alt="" loading="lazy" decoding="async"><img src="assets/img/orbitown/shot-07.webp" width="420" height="913" alt="" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/38/88/59/388859ce-c9a2-d2eb-e966-b7c1d42513fb/05.png/600x0w.webp" width="600" height="278" alt="" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/08/3c/39/083c3936-7c02-624d-7542-4bd8b7743a87/06.png/300x650bb.webp" width="300" height="650" alt="" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/19/8b/f7/198bf7e7-cc6b-c28a-bd36-71c11914a2ba/5-ghoul.png/300x650bb.webp" width="300" height="650" alt="" loading="lazy" decoding="async"><img src="assets/img/orbitown/shot-02.webp" width="420" height="913" alt="" loading="lazy" decoding="async"></div></div>
+        <div class="hero__col"><div class="hero__track"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/4b/2e/c1/4b2ec1b8-71e1-0ca3-dc72-159f83ea4b40/IMG_0485.png/300x650bb.webp" width="300" height="650" alt="" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/01/30/8b/01308b4c-5deb-1ad9-b67d-3dc81e458d1b/2-dialogue-alia.png/300x650bb.webp" width="300" height="650" alt="" loading="lazy" decoding="async"><img src="assets/img/orbitown/shot-04.webp" width="420" height="913" alt="" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9c/24/3a/9c243ad3-722e-8ca7-f9e3-c8ac23585a48/07.png/300x650bb.webp" width="300" height="650" alt="" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/11/8a/f1/118af172-5063-e4db-83f5-dc62be8980ec/02.png/600x0w.webp" width="600" height="278" alt="" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/4b/2e/c1/4b2ec1b8-71e1-0ca3-dc72-159f83ea4b40/IMG_0485.png/300x650bb.webp" width="300" height="650" alt="" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/01/30/8b/01308b4c-5deb-1ad9-b67d-3dc81e458d1b/2-dialogue-alia.png/300x650bb.webp" width="300" height="650" alt="" loading="lazy" decoding="async"><img src="assets/img/orbitown/shot-04.webp" width="420" height="913" alt="" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9c/24/3a/9c243ad3-722e-8ca7-f9e3-c8ac23585a48/07.png/300x650bb.webp" width="300" height="650" alt="" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/11/8a/f1/118af172-5063-e4db-83f5-dc62be8980ec/02.png/600x0w.webp" width="600" height="278" alt="" loading="lazy" decoding="async"></div></div>
+    </div>
+    <div class="wrap">
+      <div class="hero__inner">
+        <p class="eyebrow">Independent game studio &middot; Kuwait</p>
+        <h1 id="hero-title">Alaskarbros</h1>
+        <p class="hero__promise">Small games, made with care, for&nbsp;iPhone.</p>
+        <p class="hero__sub">Five on the App Store so far, from a tiny planet you build up to a supermarket you should have left before nine.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--solid" href="#games">See the games</a>
+          <a class="btn" href="#orbitown" style="--c:var(--orbitown)">New: Orbitown</a>
+        </div>
       </div>
-    </section>
+    </div>
+    <span class="hero__scroll" aria-hidden="true"></span>
+    <button class="toggle" type="button" aria-pressed="false" aria-label="Pause background animation"><svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg><svg class="i-play" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M4 2.5v11a1 1 0 0 0 1.5.86l9-5.5a1 1 0 0 0 0-1.72l-9-5.5A1 1 0 0 0 4 2.5Z"/></svg></button>
+  </section>
 
-    <section class="game" style="--accent:var(--gold)">
-      <h2>Romans &amp; Zombies</h2>
-      <p class="kicker">One-button survival</p>
-      <p>One button. Ten waves. Hold the line with your legion against the undead horde, under a blood sun that does not set.</p>
-      <div class="links">
-        <a class="primary" href="https://apps.apple.com/app/id6807706116">App Store</a>
-        <a href="https://thoracic-cone-000.notion.site/Romans-Zombies-Support-Privacy-3cf5f50a9e0580e7b04aefde3ca4ce44">Support &amp; Privacy</a>
+  <section class="feature section" id="orbitown" aria-labelledby="orbitown-title">
+    <div class="wrap">
+      <div class="feature__copy reveal">
+        <p class="pill">New on the App Store</p>
+        <div class="feature__title">
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/de/d8/0b/ded80bea-2ddc-c741-59ae-dbce0509dbe8/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/256x256bb.webp" width="256" height="256" alt="Orbitown app icon" loading="lazy" decoding="async">
+          <h2 id="orbitown-title">Orbitown <small>Merge &amp; Launch</small></h2>
+        </div>
+        <p class="feature__tag">Drop. Merge. Launch!</p>
+        <p class="body">Swing your satellite around a tiny planet and let go to drop a building. Two of a kind merge into the next, from Huts up to Rockets, and every Rocket lifts its colonists off to the stars. They open new planets to collect, and the planets never run out.</p>
+        <ul class="facts" aria-label="At a glance">
+          <li>One thumb</li><li>No words</li><li>Plays offline</li><li>Endless planets</li>
+        </ul>
+        <div class="actions"><a class="store" href="https://apps.apple.com/app/id6818750468"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg><span><small>Free on the</small><b>App Store<span class="sr-only">: Orbitown</span></b></span></a><a class="textlink" href="orbitown/">Support &amp; Privacy<span class="sr-only"> for Orbitown</span></a></div>
       </div>
-    </section>
+      <div class="stage reveal" data-delay="1">
+        <div class="stage__glow" aria-hidden="true"></div>
+        <img class="stage__shot stage__shot--l" src="assets/img/orbitown/shot-06.webp" width="420" height="913" alt="Orbitown screenshot: every planet plays its own way" loading="lazy" decoding="async">
+        <img class="stage__shot stage__shot--r" src="assets/img/orbitown/shot-07.webp" width="420" height="913" alt="Orbitown screenshot: collect planets on a star map" loading="lazy" decoding="async">
+        <div class="phone">
+          <video muted loop playsinline preload="none" poster="assets/img/orbitown/poster.webp" data-src="assets/video/orbitown-loop.mp4" width="432" height="936" aria-label="Orbitown gameplay: buildings merging around a tiny planet"></video>
+          <button class="toggle" type="button" aria-pressed="false" aria-label="Pause gameplay video"><svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg><svg class="i-play" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M4 2.5v11a1 1 0 0 0 1.5.86l9-5.5a1 1 0 0 0 0-1.72l-9-5.5A1 1 0 0 0 4 2.5Z"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </main>
+  <section class="games section" id="games" aria-labelledby="games-title">
+    <div class="wrap">
+      <div class="games__head reveal">
+        <div>
+          <p class="kicker">The games</p>
+          <h2 class="h2" id="games-title">Five games, one&nbsp;studio.</h2>
+        </div>
+        <p class="lede">All free on the App Store for iPhone. Two of them are made in Arabic.</p>
+      </div>
+      <div class="grid">
+      <article class="card g-orbitown card--wide reveal" data-delay="0" id="game-o">
+        <div class="card__art"><img src="assets/img/orbitown/shot-01.webp" width="420" height="913" alt="Orbitown screenshot 1" loading="lazy" decoding="async"><img src="assets/img/orbitown/shot-03.webp" width="420" height="913" alt="Orbitown screenshot 2" loading="lazy" decoding="async"><img src="assets/img/orbitown/shot-06.webp" width="420" height="913" alt="Orbitown screenshot 3" loading="lazy" decoding="async"><img src="assets/img/orbitown/shot-07.webp" width="420" height="913" alt="Orbitown screenshot 4" loading="lazy" decoding="async"></div>
+        <div class="card__body">
+          <div class="card__id">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/de/d8/0b/ded80bea-2ddc-c741-59ae-dbce0509dbe8/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/256x256bb.webp" width="256" height="256" alt="Orbitown app icon" loading="lazy" decoding="async">
+            <div>
+              <h3>Orbitown</h3> <span class="sr-only">Merge &amp; Launch</span>
+              <p class="card__genre">Puzzle &middot; Casual<span class="tag">NEW</span></p>
+            </div>
+          </div>
+          <p class="card__desc">Swing a satellite around a tiny planet and drop buildings. Two of a kind merge into the next, and every Rocket carries your colonists off to new planets to collect.</p>
+          <div class="actions"><a class="store" href="https://apps.apple.com/app/id6818750468"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg><span><small>Free on the</small><b>App Store<span class="sr-only">: Orbitown</span></b></span></a><span class="links"><a class="textlink" href="orbitown/">Support &amp; Privacy<span class="sr-only"> for Orbitown</span></a></span></div>
+        </div>
+      </article>
+      <article class="card g-lis card--wide reveal" data-delay="1" id="game-l">
+        <div class="card__art card__art--land"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/11/8a/f1/118af172-5063-e4db-83f5-dc62be8980ec/02.png/600x0w.webp" width="600" height="278" alt="Lost In Store screenshot 1" loading="lazy" decoding="async"></div>
+        <div class="card__body">
+          <div class="card__id">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/68/d0/69/68d069ac-f921-3750-5667-5e925a57d92a/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/256x256bb.webp" width="256" height="256" alt="Lost In Store app icon" loading="lazy" decoding="async">
+            <div>
+              <h3>Lost In Store</h3>
+              <p class="card__genre">First-person horror</p>
+            </div>
+          </div>
+          <p class="card__desc">A supermarket after closing time, and something in it with you. No map and no markers: you find the generator, the exit and the danger by sound. The store is rearranged every night.</p>
+          <div class="actions"><a class="store" href="https://apps.apple.com/app/id6796198606"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg><span><small>Free on the</small><b>App Store<span class="sr-only">: Lost In Store</span></b></span></a><span class="links"><a class="textlink" href="https://thoracic-cone-000.notion.site/Lost-In-Store-Support-Privacy-165b73861cfa4b30a11c141dea22f274">Support &amp; Privacy<span class="sr-only"> for Lost In Store</span></a></span></div>
+        </div>
+      </article>
+      <article class="card g-rz reveal" data-delay="2" id="game-r">
+        <div class="card__art"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/33/13/34/3313346f-e9f3-c746-ca31-d5d8841b5348/02.png/300x650bb.webp" width="300" height="650" alt="Romans &amp; Zombies screenshot 1" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9c/24/3a/9c243ad3-722e-8ca7-f9e3-c8ac23585a48/07.png/300x650bb.webp" width="300" height="650" alt="Romans &amp; Zombies screenshot 2" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/26/8a/72/268a72e4-7550-ce34-9f4c-56fddf58cf8d/03.png/300x650bb.webp" width="300" height="650" alt="Romans &amp; Zombies screenshot 3" loading="lazy" decoding="async"></div>
+        <div class="card__body">
+          <div class="card__id">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ed/81/9d/ed819da0-9a72-c1e8-4c88-65b413043b62/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/256x256bb.webp" width="256" height="256" alt="Romans &amp; Zombies app icon" loading="lazy" decoding="async">
+            <div>
+              <h3>Romans &amp; Zombies</h3>
+              <p class="card__genre">One-button strategy</p>
+            </div>
+          </div>
+          <p class="card__desc">Rome&rsquo;s last legion against ten waves of the dead. Set your line, then command with one button on a tight budget of orders, and build the army between battles.</p>
+          <div class="actions"><a class="store" href="https://apps.apple.com/app/id6807706116"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg><span><small>Free on the</small><b>App Store<span class="sr-only">: Romans & Zombies</span></b></span></a><span class="links"><a class="textlink" href="https://thoracic-cone-000.notion.site/Romans-Zombies-Support-Privacy-3cf5f50a9e0580e7b04aefde3ca4ce44">Support &amp; Privacy<span class="sr-only"> for Romans & Zombies</span></a></span></div>
+        </div>
+      </article>
+      <article class="card g-dallah reveal" data-delay="0" id="game-d">
+        <div class="card__art"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/47/87/26/478726e5-17b6-1050-3d7b-054adc92327d/3-camp.png/300x650bb.webp" width="300" height="650" alt="Screenshot 1 of دله وسيف" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/45/3d/52/453d525a-b9f0-7543-137c-dac2c065fd96/1-title.png/300x650bb.webp" width="300" height="650" alt="Screenshot 2 of دله وسيف" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/44/5c/fb/445cfb83-cf7b-ed40-a297-a8be97723866/4-battle.png/300x650bb.webp" width="300" height="650" alt="Screenshot 3 of دله وسيف" loading="lazy" decoding="async"></div>
+        <div class="card__body">
+          <div class="card__id">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/63/31/70/63317039-f3c5-1736-9fd5-2f2e6ed2b21e/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/256x256bb.webp" width="256" height="256" alt="دله وسيف app icon" loading="lazy" decoding="async">
+            <div>
+              <h3 lang="ar" dir="rtl">دله وسيف</h3>
+              <p class="card__genre">Adventure &middot; RPG &middot; Arabic</p>
+            </div>
+          </div>
+          <p class="card__desc">A story adventure in Arabic, set in Najd four centuries ago. As a young sheikh, grow your tribe from a single tent and win over seven rival tribes. Single-player and offline, with no ads or purchases.</p>
+          <div class="actions"><a class="store" href="https://apps.apple.com/app/id6787486369"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg><span><small>Free on the</small><b>App Store<span class="sr-only">: دله وسيف</span></b></span></a><span class="links"><a class="textlink" href="https://thoracic-cone-000.notion.site/Privacy-Policy-Dallah-wa-Saif-406aa3c7e4044694ad84a63a062fe605">Support &amp; Privacy<span class="sr-only"> for دله وسيف</span></a></span></div>
+        </div>
+      </article>
+      <article class="card g-brain reveal" data-delay="1" id="game-b">
+        <div class="card__art"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/42/03/46/420346e8-69e0-1184-c083-58a66ef5cd9d/IMG_0482.png/300x650bb.webp" width="300" height="650" alt="Screenshot 1 of نظف مخك" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/02/52/90/02529005-2e45-8647-78a4-1ff5b9796097/IMG_0483.png/300x650bb.webp" width="300" height="650" alt="Screenshot 2 of نظف مخك" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/4b/2e/c1/4b2ec1b8-71e1-0ca3-dc72-159f83ea4b40/IMG_0485.png/300x650bb.webp" width="300" height="650" alt="Screenshot 3 of نظف مخك" loading="lazy" decoding="async"></div>
+        <div class="card__body">
+          <div class="card__id">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/57/ba/a7/57baa7bb-da87-cfad-4c10-96b091626925/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/256x256bb.webp" width="256" height="256" alt="نظف مخك app icon" loading="lazy" decoding="async">
+            <div>
+              <h3 lang="ar" dir="rtl">نظف مخك</h3>
+              <p class="card__genre">Puzzle &middot; Word &middot; Arabic</p>
+            </div>
+          </div>
+          <p class="card__desc">Quick daily brain training in Arabic: Sudoku, quizzes and word games in one clean app, made for short sessions.</p>
+          <div class="actions"><a class="store" href="https://apps.apple.com/app/id6759166589"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg><span><small>Free on the</small><b>App Store<span class="sr-only">: نظف مخك</span></b></span></a><span class="links"><a class="textlink" href="https://thoracic-cone-000.notion.site/App-Support-77217a6cedfe4289ae35f87caf84c162">Support<span class="sr-only"> for نظف مخك</span></a><a class="textlink" href="https://thoracic-cone-000.notion.site/Privacy-Policy-bd5408d4984c49d8b449213c66ff6c1e">Privacy<span class="sr-only"> for نظف مخك</span></a></span></div>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <span><a href="mailto:alaskarbros@gmail.com">alaskarbros@gmail.com</a></span>
-    <span>&copy; 2026 Alaskarbros</span>
-  </footer>
+  <section class="studio section" id="studio" aria-labelledby="studio-title">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="kicker">The studio</p>
+        <h2 class="h2" id="studio-title">One developer, in&nbsp;Kuwait.</h2>
+      </div>
+      <div class="reveal" data-delay="1">
+        <p>Alaskarbros is a one-person studio. Every game here was designed, built and shipped by one developer in Kuwait, in English and in Arabic.</p>
+        <p>The games are small on purpose. Each is single-player and built around one clear idea: a planet you build up, a store you hide in, a line you hold, a tribe you unite, a mind you keep sharp.</p>
+        <ul class="numbers">
+          <li><b>5</b> <span>games on the App Store</span></li>
+          <li><b>1</b> <span>developer</span></li>
+          <li><b>100%</b> <span>single-player</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <section class="contact section" id="contact" aria-labelledby="contact-title">
+    <div class="wrap reveal">
+      <p class="kicker">Contact</p>
+      <h2 class="h2" id="contact-title">Say hello.</h2>
+      <p class="lede">Support, press or business: one inbox, read by the person who makes the games.</p>
+      <a class="mail" href="mailto:alaskarbros@gmail.com">alaskarbros@gmail.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <a class="wordmark" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a2f8f"/><stop offset="1" stop-color="#0b0a1c"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#lg2)"/><path fill="#f5c35b" fill-rule="evenodd" d="M32 11 47.5 51h-7l-3.3-9H26.8l-3.3 9h-7L32 11Zm0 15.5L28.8 36h6.4L32 26.5Z"/><ellipse cx="32" cy="37" rx="26" ry="8" fill="none" stroke="#81e0c1" stroke-width="2.6" transform="rotate(-16 32 37)"/></svg><span>Alaskarbros</span></a>
+      <p>Small games for iPhone, made in Kuwait.</p>
+    </div>
+    <nav aria-label="Support and privacy">
+      <h2>Support &amp; privacy</h2>
+      <ul>
+          <li><a href="/orbitown/"><span>Orbitown</span> privacy</a></li>
+          <li><a href="https://thoracic-cone-000.notion.site/Lost-In-Store-Support-Privacy-165b73861cfa4b30a11c141dea22f274"><span>Lost In Store</span> privacy</a></li>
+          <li><a href="https://thoracic-cone-000.notion.site/Romans-Zombies-Support-Privacy-3cf5f50a9e0580e7b04aefde3ca4ce44"><span>Romans &amp; Zombies</span> privacy</a></li>
+          <li><a href="https://thoracic-cone-000.notion.site/Privacy-Policy-Dallah-wa-Saif-406aa3c7e4044694ad84a63a062fe605"><span lang="ar" dir="rtl">دله وسيف</span> privacy</a></li>
+          <li><a href="https://thoracic-cone-000.notion.site/Privacy-Policy-bd5408d4984c49d8b449213c66ff6c1e"><span lang="ar" dir="rtl">نظف مخك</span> privacy</a></li>
+      </ul>
+    </nav>
+    <div class="footer__base">
+      <span>&copy; 2026 Alaskarbros</span>
+      <a href="mailto:alaskarbros@gmail.com">alaskarbros@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js" defer></script>
 </body>
 </html>
